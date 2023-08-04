@@ -25,7 +25,7 @@ OpenAIRouter.post("/convertcode", async (req, res) => {
             body: JSON.stringify({
                 model: "gpt-3.5-turbo",
                 messages: [{ role: "user", content: `${code} Convert this code to ${language}` }],
-                max_tokens: 50,
+                max_tokens: 100,
             }),
         };
 
@@ -55,7 +55,7 @@ OpenAIRouter.post("/debug", async (req, res) => {
             body: JSON.stringify({
                 model: "gpt-3.5-turbo",
                 messages: [{ role: "user", content: `Debug this ${code} and give the right solution` }],
-                max_tokens: 50,
+                max_tokens: 100,
             }),
         };
 
